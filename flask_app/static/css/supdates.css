@@ -1,0 +1,65 @@
+
+        body {
+            font-family: 'Mochiy Pop One', sans-serif;
+            min-height: 75rem;
+            padding-top: 1rem;
+            color: whitesmoke;
+            background-color: #212429;
+        }
+
+        h1{
+            font-family: 'Quantico', sans-serif;
+            color: whitesmoke;
+        }
+        
+        h6{
+            font-family: 'Titillium Web', sans-serif;
+            opacity: 50%;
+            color: whitesmoke;
+        }
+
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: 'Mochiy Pop One', sans-serif;;
+            color: whitesmoke;
+        }
+        /* td,
+        th, */
+        p {
+            font-size: 18px;
+            font-family: 'Titillium Web', sans-serif;
+            color: whitesmoke;
+        }
+
+        #logo{
+            font-size: 650%;
+        }
+
+        #slogan{
+            margin-bottom: -2%;
+            font-family: 'Rock Salt';
+        }
+
+        #icons{
+            margin-top: -1%;
+        }
+
+        #hungry {
+            width: 7%;
+            filter:invert(1);
+            opacity: 50%;
+        }
+
+        #coin {
+            width: 7%;
+            filter:invert(1);
+            opacity: 50%;
+            transform: rotate(20deg);
+        }
+        #idea {
+            width: 7%;
+            filter:invert(1);
+            opacity: 50%;
+        }
