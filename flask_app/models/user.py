@@ -73,37 +73,4 @@ class User():
         results = connectToMySQL(DATABASE).query_db(query, data)
         if results == ():
             return False
-        return results[0]
-        
-        
-        
-    # To Purge or not to Purge?
-    # looks for user by id
-    # @classmethod
-    # def get_by_id(cls, data):
-    #     query = "SELECT * FROM users LEFT JOIN favorites ON users.id = favorites.user_id  WHERE id = %(id)s;"
-    #     results = connectToMySQL(DATABASE).query_db(query, data)
-    #     if results == ():
-    #         return False
-    #     # create class object into for favorites of a user
-    #     user = cls( results[0] )
-    #     print(results)
-    #     for row in results:
-    #         # Now we parse the burger data to make instances of burgers and add them into our list.
-    #         favorite = {
-    #             "id" : row["id"],
-    #             "first_name" : row["first_name"],
-    #             "last_name" : row["last_name"],
-    #             "email" : row["email"],
-    #             "pword_hash" : row["pword_hash"],
-    #             "created_at" : row["created_at"],
-    #             "updated_at" : row["updated_at"],
-    #             "user_id" : row["user_id"],
-    #             "recipe_id" : row["recipe_id"]
-    #         }
-    #         user.favorites.append( User( favorite ) )
-    #     for each in user.favorites:
-    #         print(each.favorite)
-        
-    #     return user.favorites
-
+        return results[0];

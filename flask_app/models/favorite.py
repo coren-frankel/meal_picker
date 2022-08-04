@@ -18,5 +18,4 @@ class Favorite():
         if results == ():
             return False
         print(results)
-        return results
-        
+        return results;
