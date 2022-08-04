@@ -80,15 +80,18 @@ def result():
 def go_choose_random():
     return render_template('roulette.html')
 
-@app.route('/prep/')
+@app.route('/prepme', methods=['POST'])
+def pass_recipe():
+    session['recipe_id'] = request.form['recipe_id']
+    print("sending from /prep?...")
+    return redirect('/prep')
+
+@app.route('/prep')
 def show_recipe():
-    if 'user_id' not in session:
-        return redirect('/')
-    # data = {
-    #     "id" : rcp_id
-    # }
-    # recipe = Recipe.grab_recipe(data)
-    return render_template('show_recipe.html')#, recipe=recipe)
+    data = {
+        "recipe_id" : session['recipe_id']
+    }
+    return render_template('show_recipe.html', data = data)#, recipe=recipe)
 
 @app.route('/favorites')
 def display_favorites():
