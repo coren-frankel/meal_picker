@@ -83,7 +83,7 @@ def go_choose_random():
 @app.route('/prepme', methods=['POST'])
 def pass_recipe():
     session['recipe_id'] = request.form['recipe_id']
-    print("sending from /prep?...")
+    print("sending from /prepme...")
     return redirect('/prep')
 
 @app.route('/prep')
