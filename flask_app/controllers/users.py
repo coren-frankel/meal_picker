@@ -82,18 +82,16 @@ def go_choose_random():
 
 @app.route('/prepme', methods=['POST'])
 def pass_recipe():
-    if request.method == 'POST':
-        session['recipe_id'] = request.form['recipe_id']
-        print("sending from /prepme...")
-        return redirect('/prep')
-    return redirect('/favorites')
+    session['recipe_id'] = request.form['recipe_id']
+    print("sending from /prepme...")
+    return redirect('/prep')
 
 @app.route('/prep')
 def show_recipe():
     data = {
         "recipe_id" : session['recipe_id']
     }
-    return render_template('show_recipe.html', data = data)#, recipe=recipe)
+    return render_template('show_recipe.html', data = data)
 
 @app.route('/favorites')
 def display_favorites():
