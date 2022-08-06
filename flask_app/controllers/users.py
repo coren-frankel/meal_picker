@@ -82,9 +82,11 @@ def go_choose_random():
 
 @app.route('/prepme', methods=['POST'])
 def pass_recipe():
-    session['recipe_id'] = request.form['recipe_id']
-    print("sending from /prepme...")
-    return redirect('/prep')
+    if request.method == 'POST':
+        session['recipe_id'] = request.form['recipe_id']
+        print("sending from /prepme...")
+        return redirect('/prep')
+    return redirect('/favorites')
 
 @app.route('/prep')
 def show_recipe():
