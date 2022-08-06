@@ -91,6 +91,7 @@ def show_recipe():
     data = {
         "recipe_id" : session['recipe_id']
     }
+    print("made it to the return line rendering show_recipe")
     return render_template('show_recipe.html', data = data)
 
 @app.route('/favorites')
@@ -112,6 +113,17 @@ def add_favorites():
     }
     Favorite.add_favorite(data)
     return redirect('/favorites')
+
+@app.route('/remove/<int:rcp_id>')
+def remove_piq(rcp_id):
+    if 'user_id' not in session:
+        return redirect('/')
+    data = {
+        "user_id" : session['user_id'],
+        "recipe_id" : rcp_id
+    }
+    Favorite.remove_piq(data)
+    return redirect ('/favorites')
 
 @app.route('/logout')
 def logout():

@@ -25,8 +25,11 @@
             font-family: 'Mochiy Pop One', sans-serif;;
             color: whitesmoke;
         }
-        /* td,
-        th, */
+        
+        #instr p {
+            color: black;
+        }
+        
         p {
             font-size: 18px;
             font-family: 'Titillium Web', sans-serif;

@@ -1,3 +1,4 @@
+from sqlite3 import connect
 from flask_app import DATABASE
 from flask_app.config.mysqlconnection import connectToMySQL
 
@@ -13,9 +14,14 @@ class Favorite():
     
     @classmethod
     def get_favorites(cls, data):
-        query = "SELECT recipe_id FROM favorites WHERE user_id = %(user_id)s;"
+        query = "SELECT recipe_id FROM favorites WHERE user_id = %(user_id)s AND recipe_id = %(recipe_id)s;"
         results = connectToMySQL(DATABASE).query_db(query, data)
         if results == ():
             return False
         print(results)
         return results;
+    
+    @classmethod
+    def remove_piq(cls, data):
+        query = "DELETE FROM favorites WHERE recipe_id = %(recipe_id)s;"
+        return connectToMySQL(DATABASE).query_db(query, data)

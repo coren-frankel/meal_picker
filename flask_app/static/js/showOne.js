@@ -59,24 +59,23 @@ function myFunc(one) {
                                             <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
                                                 aria-labelledby="panelsStayOpen-headingOne">
                                                 <div class="accordion-body d-flex justify-content-between">
-                                                    <table class="col-4">
+                                                    <table class="col-4" style="font-size:110%;">
                                                         <tr>
-                                                            <th>Cooktime:</th>
+                                                            <th>Cooktime :</th>
                                                             <td>${recipe.readyInMinutes} Minutes</td>
                                                         </tr>
                                                         <tr>
-                                                            <th>Diet Matches:</th>
+                                                            <th>Diet Matches :</th>
                                                             <td>${diets}</td>
                                                         </tr>
                                                         
                                                         <tr>
-                                                            <th>Serves:</th>
+                                                            <th>Serves :</th>
                                                             <td>${recipe.servings}</td>
                                                         </tr>
                                                     </table>
                                                     <div class="col-8 text-center">
                                                         <img src="${recipe.image}" alt="${recipe.title}" style="object-fit: contain; height: 300px; width: auto; position: center;" class="Rounded-2 left-100"><br>
-                                                        <span style="font-size:1.5em;">Wine Pairings:</span><br> ${recipe.winePairing.pairingText}
                                                     </div>
                                                 </div>
                                             </div>
@@ -121,13 +120,14 @@ function myFunc(one) {
                                             </h2>
                                             <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse"
                                                 aria-labelledby="panelsStayOpen-headingFour">
-                                                <div class="accordion-body">
+                                                <div class="accordion-body" id="instr">
                                                     ${recipe.instructions}
                                                 </div>
                                             </div>
                                         </div>
                                 </fieldset>
-                            </form>`
+                            </form>
+                            <a href="/remove/${recipe.id}" class="btn btn-large btn-danger">Purge from myPiqs</a>`
             })
             .catch(err => console.error(err));
     }
