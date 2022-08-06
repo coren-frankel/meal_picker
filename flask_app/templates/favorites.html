@@ -14,7 +14,7 @@
         href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Quantico:ital@1&family=Titillium+Web&display=swap"
         rel="stylesheet">
     <link href="{{url_for('static',filename='css/supdates.css')}}" rel="stylesheet">
-    <script type="text/javascript" src="{{url_for('static',filename='js/favorites.js')}}" defer></script>
+    <script type="text/javascript" src="{{url_for('static',filename='js/favorites.js')}}"></script>
     <script type="text/javascript">
         myVar = myFunc({{ data | tojson | safe }}) // SUPER COOL JSON data pass from flask to js
     </script>
