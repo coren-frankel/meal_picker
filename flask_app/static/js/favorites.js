@@ -104,7 +104,7 @@ function myFunc(favs) {
                         }
                         row.innerHTML+=`<tr>
                                             <td class="border col-3">${recipe.title}<br><br><br><br><img src="${recipe.image}" alt="recipe image sourced elsewhere" style="width:200px;height:auto;" class="rounded-3"></td>
-                                            <td class="border col-2">${convertedCookTime} Minutes<br><br><br><br><br><br><br><form action="/prepme" method="POST"><input type="hidden" name="recipe_id" value="${recipe.id}"><input type="submit" value="View" class="btn btn-sm btn-primary"></form></td>
+                                            <td class="border col-2">${convertedCookTime}<br><br><br><br><br><br><br><form action="/prepme" method="POST"><input type="hidden" name="recipe_id" value="${recipe.id}"><input type="submit" value="View" class="btn btn-sm btn-primary"></form></td>
                                             <td class="border col-7">${recipe.summary}</td>
                                         </tr>`
                     }
