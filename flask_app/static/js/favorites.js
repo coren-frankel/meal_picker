@@ -26,6 +26,7 @@ function myFunc(favs) {
                 nada.innerText = ''
                 console.log(response)
                 var recipe = response
+                var convertedCookTime;
                 if(recipe.readyInMinutes >= 60){
                     var duration = recipe.readyInMinutes
                     var hours = 0;
@@ -77,6 +78,7 @@ function myFunc(favs) {
                     for (var i = 0; i < response.length; i++) {
                         var recipe = response[i]
                         console.log(recipe)
+                        var convertedCookTime;
                         if(recipe.readyInMinutes >= 60){
                             var duration = recipe.readyInMinutes
                             var hours = 0;

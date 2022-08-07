@@ -48,6 +48,7 @@ function getOneRandom(event) {
                 ingredientsList += `<li>${ingreds[i].original}</li>`
             }
             ingredientsList += '</ul>'
+            var convertedCookTime;
             if(recipe.readyInMinutes >= 60){
                 var duration = recipe.readyInMinutes
                 var hours = 0;
@@ -177,6 +178,7 @@ function getFiveRandom(event) {
                 ingredientsList += `<li>${ingreds[i].original}</li>`
             }
             ingredientsList += '</ul>';
+            var convertedCookTime;
             if(recipe.readyInMinutes >= 60){
                 var duration = recipe.readyInMinutes
                 var hours = 0;
@@ -302,6 +304,7 @@ function getTenRandom(event) {
                 diets = 'None-Listed'
             ingreds = recipe.extendedIngredients
             ingredientsList = '<ul>'
+            var convertedCookTime;
             for (var i = 0; i < ingreds.length; i++) {
                 ingredientsList += `<li>${ingreds[i].original}</li>`
             }
