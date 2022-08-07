@@ -166,7 +166,7 @@ function getFiveRandom(event) {
                     post = post.join("-")
                     diets += post
                     if (recipe.diets[i + 1] != undefined) {
-                        diets += ', '
+                        diets += ', <br>'
                     }
                     i++
                 }
@@ -296,7 +296,7 @@ function getTenRandom(event) {
                     post = post.join("-")
                     diets += post
                     if (recipe.diets[i + 1] != undefined) {
-                        diets += ', '
+                        diets += ', <br>'
                     }
                     i++
                 }

@@ -30,7 +30,7 @@ function myFunc(one) {
                         post = post.join("-")
                         diets += post
                         if (recipe.diets[i + 1] != undefined) {
-                            diets += ', '
+                            diets += ', <br>'
                         }
                         i++
                     }
@@ -94,14 +94,14 @@ function myFunc(one) {
                                             <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
                                                 aria-labelledby="panelsStayOpen-headingOne">
                                                 <div class="accordion-body d-flex justify-content-between">
-                                                    <table class="col-4" style="font-size:110%;">
+                                                    <table class="col-4 text-center" style="font-size:110%;">
                                                         <tr>
                                                             <th>Cooktime :</th>
-                                                            <td>${convertedCookTime}</td>
+                                                            <td class="ms-3">${convertedCookTime}</td>
                                                         </tr>
                                                         <tr>
                                                             <th>Diet Matches :</th>
-                                                            <td>${diets}</td>
+                                                            <td class="ms-3">${diets}</td>
                                                         </tr>
                                                         <tr>
                                                             <th>Serves :</th>
