@@ -49,9 +49,10 @@ def register(): # validate the form here ...
         new_user = User.save_entry(data) # Call the save @classmethod on User
         flash("Please Login!", "success_log")
         if (session['recipe_id']):
-            first_piq = {
-                "recipe_id" : session['recipe_id'],
-                "user_id" : new_user
+            if session['recipe_id'] != -1:
+                first_piq = {
+                    "recipe_id" : session['recipe_id'],
+                    "user_id" : new_user
             }
             Favorite.add_favorite(first_piq)
             session['recipe_id'] = -1
