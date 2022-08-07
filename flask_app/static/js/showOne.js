@@ -75,7 +75,7 @@ function myFunc(one) {
                                                         </tr>
                                                     </table>
                                                     <div class="col-8 text-center">
-                                                        <img src="${recipe.image}" alt="${recipe.title}" style="object-fit: contain; height: 300px; width: auto; position: center;" class="Rounded-2 left-100"><br>
+                                                        <img src="${recipe.image}" alt="${recipe.title}" style="object-fit: contain; height: 300px; width: auto; position: center;" class="rounded-1 img-fluid left-100"><br>
                                                     </div>
                                                 </div>
                                             </div>
@@ -127,7 +127,7 @@ function myFunc(one) {
                                         </div>
                                 </fieldset>
                             </form>
-                            <a href="/remove/${recipe.id}" class="btn btn-large btn-danger">Purge from myPiqs</a>`
+                            <a href="/remove/${recipe.id}" class="btn btn-large btn-danger">Purge this from myPiqs</a>`
             })
             .catch(err => console.error(err));
     }

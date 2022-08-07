@@ -44,6 +44,7 @@ def register(): # validate the form here ...
             "pword_hash" : pw_hash
         }
         User.save_entry(data) # Call the save @classmethod on User
+        flash("Please Login!", "success_log")
         return redirect("/")
 
 @app.route('/login', methods=['POST'])
