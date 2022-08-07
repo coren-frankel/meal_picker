@@ -77,9 +77,34 @@ function myFunc(favs) {
                     for (var i = 0; i < response.length; i++) {
                         var recipe = response[i]
                         console.log(recipe)
+                        if(recipe.readyInMinutes >= 60){
+                            var duration = recipe.readyInMinutes
+                            var hours = 0;
+                            while (duration >= 60){
+                                duration -= 60;
+                                hours++;
+                            }
+                            if (duration == 0){
+                                duration = '';
+                            } else {
+                                duration += ' Minutes';
+                            }
+                            if (hours > 1) {
+                                hours += ' Hours'
+                            } else {
+                                hours += ' Hour'
+                            }
+                            if (duration.length > 0){
+                                convertedCookTime = `${hours} & ${duration}`
+                            } else {
+                                convertedCookTime = `${hours}`
+                            }
+                        } else {
+                            convertedCookTime = `${recipe.readyInMinutes} Minutes`;
+                        }
                         row.innerHTML+=`<tr>
                                             <td class="border col-3">${recipe.title}<br><br><br><br><img src="${recipe.image}" alt="recipe image sourced elsewhere" style="width:200px;height:auto;" class="rounded-3"></td>
-                                            <td class="border col-2">${recipe.readyInMinutes} Minutes<br><br><br><br><br><br><br><form action="/prepme" method="POST"><input type="hidden" name="recipe_id" value="${recipe.id}"><input type="submit" value="View" class="btn btn-sm btn-primary"></form></td>
+                                            <td class="border col-2">${convertedCookTime} Minutes<br><br><br><br><br><br><br><form action="/prepme" method="POST"><input type="hidden" name="recipe_id" value="${recipe.id}"><input type="submit" value="View" class="btn btn-sm btn-primary"></form></td>
                                             <td class="border col-7">${recipe.summary}</td>
                                         </tr>`
                     }
