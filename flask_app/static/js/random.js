@@ -104,7 +104,7 @@ function getOneRandom(event) {
                                                             <td><input type="submit" class="btn btn-sm btn-outline-success" value="+ Add"></td>
                                                         </tr>
                                                     </table>
-                                                    <img src="${recipe.image}" alt="${recipe.title}" style="object-fit: contain; height: 300px; width: auto; position: center;" class="rounded-3">
+                                                    <img src="${recipe.image}" alt="${recipe.title}" style="object-fit: contain; height: 300px; width: auto; position: center;" class="rounded img-fluid">
                                                 </div>
                                             </div>
                                         </div>
@@ -233,7 +233,7 @@ function getFiveRandom(event) {
                                                                 <td><input type="submit" class="btn btn-sm btn-outline-success" value="+ Add"></td>
                                                             </tr>
                                                         </table>
-                                                        <img src="${recipe.image}" alt="${recipe.title}" style="object-fit: contain; height: 300px; width: auto; position: center;" class="Rounded-2">
+                                                        <img src="${recipe.image}" alt="${recipe.title}" style="object-fit: contain; height: 300px; width: auto; position: center;" class="rounded img-fluid">
                                                     </div>
                                                 </div>
                                             </div>
@@ -363,7 +363,7 @@ function getTenRandom(event) {
                                                                 <td><input type="submit" class="btn btn-sm btn-outline-success" value="+ Add"></td>
                                                             </tr>
                                                         </table>
-                                                        <img src="${recipe.image}" alt="${recipe.title}" style="object-fit: contain; height: 300px; width: auto; position: center;" class="Rounded-2">
+                                                        <img src="${recipe.image}" alt="${recipe.title}" style="object-fit: contain; height: auto; width: 450px; position: center;" class="rounded img-fluid">
                                                     </div>
                                                 </div>
                                             </div>
