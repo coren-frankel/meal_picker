@@ -20,12 +20,15 @@ bcrypt = Bcrypt(app)
 def index():
     if 'user_id' in session:
         return redirect('/plan')
+    if 'recipe_id' in session:
+        if session['recipe_id'] != -1:
+            flash('Save your piq by logging in!', 'success_log')
     return render_template('index.html')
 
 @app.route('/register')#Render registration page
 def registration():
     if 'user_id' in session:
-        return redirect('/plan')
+        return redirect('/favorites')
     return render_template('registration.html')
 
 # Bcrypt methods below
@@ -43,8 +46,15 @@ def register(): # validate the form here ...
             "email": request.form['email'].lower(),
             "pword_hash" : pw_hash
         }
-        User.save_entry(data) # Call the save @classmethod on User
+        new_user = User.save_entry(data) # Call the save @classmethod on User
         flash("Please Login!", "success_log")
+        if (session['recipe_id']):
+            first_piq = {
+                "recipe_id" : session['recipe_id'],
+                "user_id" : new_user
+            }
+            Favorite.add_favorite(first_piq)
+            session['recipe_id'] = -1
         return redirect("/")
 
 @app.route('/login', methods=['POST'])
@@ -63,6 +73,14 @@ def login():
     # if the passwords matched, we set the user_id into session
     session['user_id'] = user.id
     session['first_name'] = user.first_name
+    if 'recipe_id' in session:
+        if (session['recipe_id'] != -1):
+            new_piq = {
+                "recipe_id" : session['recipe_id'],
+                "user_id" : session['user_id']
+            }
+            Favorite.add_favorite(new_piq)
+            session['recipe_id'] = -1
     return redirect("/favorites")
 
 @app.route('/plan')# Show all Recipes! If not logged in, clear session and go to login page
@@ -107,7 +125,10 @@ def display_favorites():
 @app.route('/favorite', methods = ['POST'])
 def add_favorites():
     if 'user_id' not in session:
-        return redirect('/')
+        session['recipe_id'] = request.form['recipe_id']
+        flash('To save a recipe to your piqs you need an account!', 'reg_piq')
+        flash('Register and then Login to save the recipe!', 'reg_piq')
+        return redirect('/register')
     data = {
         "user_id" : session['user_id'],
         "recipe_id" : request.form['recipe_id']

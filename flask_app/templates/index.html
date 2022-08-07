@@ -39,12 +39,11 @@
     </div>
     <div class="col-5 m-1 py-2 text-center d-flex align-items-center row">
         <form class="form-control bg-secondary text-light p-4 text-start mb-2" action="/login" method="POST">
-            {% with messages = get_flashed_messages(category_filter=["error_log"]) %}
-            {% if messages %}
-            <div
-                class="alert-message block-message error_log bg-danger row border rounded-1 d-flex justify-content-center pt-3">
+            {% with errors = get_flashed_messages(category_filter=["error_log"]) %}
+            {% if errors %}
+            <div class="alert-message block-message error_log bg-danger row border rounded-1 d-flex justify-content-center pt-3">
                 <p class="col-12 d-flex justify-content-center"><strong><em>Heyyy! Cut that out!</em></strong></p>
-                {% for message in messages %}
+                {% for message in errors %}
                 <p class="text-dark col-12 text-center">{{message}}</p>
                 {% endfor %}
             </div>
@@ -52,12 +51,11 @@
             {% endwith %}
             {% with messages = get_flashed_messages(category_filter=["success_log"]) %}
             {% if messages %}
-            <div
-                class="alert-message block-message success_log bg-success row border rounded-1 d-flex justify-content-center pt-3">
+            <div class="alert-message block-message success_log bg-success row border rounded-1 d-flex justify-content-center pt-3">
                 <p class="col-12 text-center rocksalt"><strong><em>welcome to piqr</em></strong></p>
-                <p class="text-center">Registration Successful!</p>
+                <p class="text-center"></p>
                 {% for message in messages %}
-                <p class="text-light col-12 text-center">{{message}}</p>
+                <p class="text-light col-12 text-center success_log">{{message}}</p>
                 {% endfor %}
             </div>
             {% endif %}

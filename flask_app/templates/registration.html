@@ -10,7 +10,7 @@
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Quantico:ital@1&family=Titillium+Web&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Rock+Salt&family=Quantico:ital@1&family=Titillium+Web&display=swap" rel="stylesheet">
     <link href="{{url_for('static',filename='css/supdates.css')}}" rel="stylesheet">
     <script src="{{url_for('static',filename='/js/script.js')}}" defer></script>
     <link rel="icon" href="static/imgs/favicon.ico" type="image/x-icon">
@@ -54,6 +54,16 @@
                 <p class="text-warning list-group-item"><strong><em>Wait, No No no no no nonnnnnno!</em></strong></p>
                 {% for message in errors %}
                 <p class="text-light">{{message}}</p>
+                {% endfor %}
+            </div>
+            {% endif %}
+            {% endwith %}
+            {% with msgs = get_flashed_messages(category_filter=["reg_piq"]) %}
+            {% if msgs %}
+            <div class="alert-message block-message reg_piq bg-warning row border rounded-1 pt-3 text-center">
+                <p class="text-dark list-group-item rocksalt"><strong><em>Did you want to piq a recipe?</em></strong></p>
+                {% for message in msgs %}
+                <p class="text-dark">{{message}}</p>
                 {% endfor %}
             </div>
             {% endif %}

@@ -22,9 +22,9 @@
 <body class="m-3">
     <div class="d-flex justify-content-end">
         <a href="/plan" class="btn btn-outline-info btn-sm">Get By</a>
-        {% if session %}<a href="/favorites" class="btn btn-outline-success btn-sm mx-3">My Piqs</a>
-        {% elif not session %}<a href="/register" class="btn btn-outline-success btn-sm mx-3">Sign Up!</a>{% endif %}
-        {% if session %}<a href="/logout" class="btn btn-outline-danger btn-sm">Logout</a>{% endif %}
+        {% if session['user_id'] %}<a href="/favorites" class="btn btn-outline-success btn-sm mx-3">My Piqs</a>
+        {% elif not session['user_id'] %}<a href="/register" class="btn btn-outline-success btn-sm mx-3">Sign Up!</a>{% endif %}
+        {% if session['user_id'] %}<a href="/logout" class="btn btn-outline-danger btn-sm">Logout</a>{% endif %}
     </div>
     <div class="d-flex justify-content-center logoBlock mt-4">
         <h1 class="text-info">piqr</h1>
@@ -35,14 +35,14 @@
 
     </div>
     <div class="d-flex justify-content-center mt-3">
-        <button onclick="getOneRandom(event)" class="btn btn-sm btn-success me-3">1 Recipe</button>{% if session %}
+        <button onclick="getOneRandom(event)" class="btn btn-sm btn-success me-3">1 Recipe</button>{% if session['user_id'] %}
         <button onclick="getFiveRandom(event)" class="btn btn-sm me-3 text-light" style="background-color: rebeccapurple;">5 Recipes</button>
         <button onclick="getTenRandom(event)" class="btn btn-sm btn-primary">10 Recipes</button>{% endif %}
     </div>
     <div class="text-center mt-3">
         <h5 class="text-light mb-4">Put it up to chance! <br><br>Just <em>*Click*</em> And...<br><br> get spontaneous recipes<br><br>from over 1 million!</h5>
-        {% if not session%}
-        <h6 class="badge bg-danger text-wrap" style="width: 280px;">**Don't click away too quickly!--losing a recipe** **to the million is easy to do without an account!** **Go Sign Up to get access to more features!**</h6>
+        {% if not session['user_id'] %}
+        <h6 class="badge bg-info text-dark text-wrap" style="width: 280px;">**Don't click away too quickly!--losing a recipe** **to the million is easy to do without an account!** **Go Sign Up to get access to more features!**</h6>
         {% endif %}
     </div>
 </body>

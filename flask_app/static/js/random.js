@@ -36,7 +36,7 @@ function getOneRandom(event) {
                     post = post.join("-")
                     diets += post
                     if (recipe.diets[i + 1] != undefined) {
-                        diets += ', '
+                        diets += ', <br>'
                     }
                     i++
                 }
@@ -90,18 +90,17 @@ function getOneRandom(event) {
                                             <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
                                                 aria-labelledby="panelsStayOpen-headingOne">
                                                 <div class="accordion-body d-flex justify-content-between">
-                                                    <table>
+                                                    <table class="text-center">
                                                         <tr>
                                                             <th>Cooktime :</th>
-                                                            <td>${convertedCookTime}</td>
+                                                            <td class="ms-3">${convertedCookTime}</td>
                                                         </tr>
                                                         <tr>
-                                                            <th>Matches Diet :</th>
-                                                            <td>${diets}</td>
+                                                            <th>Matches <br>Diet :</th>
+                                                            <td class="ms-3">${diets}</td>
                                                         </tr>
                                                         <tr>
-                                                            <th>Piq me!</th>
-                                                            <td><input type="submit" class="btn btn-sm btn-outline-success" value="+ Add"></td>
+                                                            <td><input type="submit" class="btn btn-sm btn-outline-success" value="piqMe"></td>
                                                         </tr>
                                                     </table>
                                                     <img src="${recipe.image}" alt="${recipe.title}" style="object-fit: contain; height: 300px; width: auto; position: center;" class="rounded img-fluid">
@@ -219,18 +218,17 @@ function getFiveRandom(event) {
                                                 <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
                                                     aria-labelledby="panelsStayOpen-headingOne">
                                                     <div class="accordion-body d-flex justify-content-between">
-                                                        <table>
+                                                        <table class="text-center">
                                                             <tr>
                                                                 <th>Cooktime :</th>
-                                                                <td>${convertedCookTime}</td>
+                                                                <td class="ms-3">${convertedCookTime}</td>
                                                             </tr>
                                                             <tr>
-                                                                <th>Matches Diet :</th>
-                                                                <td>${diets}</td>
+                                                                <th>Matches <br>Diet :</th>
+                                                                <td class="ms-3">${diets}</td>
                                                             </tr>
                                                             <tr>
-                                                                <th>Piq me!</th>
-                                                                <td><input type="submit" class="btn btn-sm btn-outline-success" value="+ Add"></td>
+                                                                <td><input type="submit" class="btn btn-sm btn-outline-success" value="piqMe"></td>
                                                             </tr>
                                                         </table>
                                                         <img src="${recipe.image}" alt="${recipe.title}" style="object-fit: contain; height: 300px; width: auto; position: center;" class="rounded img-fluid">
@@ -349,21 +347,20 @@ function getTenRandom(event) {
                                                 <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
                                                     aria-labelledby="panelsStayOpen-headingOne">
                                                     <div class="accordion-body d-flex justify-content-between">
-                                                        <table>
+                                                        <table class="text-center">
                                                             <tr>
                                                                 <th>Cooktime :</th>
-                                                                <td>${convertedCookTime}</td>
+                                                                <td class="ms-3">${convertedCookTime}</td>
                                                             </tr>
                                                             <tr>
-                                                                <th>Matches Diet :</th>
-                                                                <td>${diets}</td>
+                                                                <th>Matches <br>Diet :</th>
+                                                                <td class="ms-3">${diets}</td>
                                                             </tr>
                                                             <tr>
-                                                                <th>Piq me!</th>
-                                                                <td><input type="submit" class="btn btn-sm btn-outline-success" value="+ Add"></td>
+                                                                <td><input type="submit" class="btn btn-sm btn-outline-success" value="piqMe"></td>
                                                             </tr>
                                                         </table>
-                                                        <img src="${recipe.image}" alt="${recipe.title}" style="object-fit: contain; height: auto; width: 450px; position: center;" class="rounded img-fluid">
+                                                        <img src="${recipe.image}" alt="${recipe.title}" style="object-fit: contain; height: 300px; width: auto; position: center;" class="rounded img-fluid">
                                                     </div>
                                                 </div>
                                             </div>
