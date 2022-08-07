@@ -67,11 +67,11 @@ function getOneRandom(event) {
                                                 <div class="accordion-body d-flex justify-content-between">
                                                     <table>
                                                         <tr>
-                                                            <th>Cooktime:</th>
+                                                            <th>Cooktime :</th>
                                                             <td>${recipe.readyInMinutes} Minutes</td>
                                                         </tr>
                                                         <tr>
-                                                            <th>Matches Diet:</th>
+                                                            <th>Matches Diet :</th>
                                                             <td>${diets}</td>
                                                         </tr>
                                                         <tr>
@@ -171,15 +171,15 @@ function getFiveRandom(event) {
                                                     <div class="accordion-body d-flex justify-content-between">
                                                         <table>
                                                             <tr>
-                                                                <th>Cooktime:</th>
+                                                                <th>Cooktime :</th>
                                                                 <td>${recipe.readyInMinutes} Minutes</td>
                                                             </tr>
                                                             <tr>
-                                                                <th>Matches Diet:</th>
+                                                                <th>Matches Diet :</th>
                                                                 <td>${diets}</td>
                                                             </tr>
                                                             <tr>
-                                                                <th>Piq me?:</th>
+                                                                <th>Piq me!</th>
                                                                 <td><input type="submit" class="btn btn-sm btn-outline-success" value="+ Add"></td>
                                                             </tr>
                                                         </table>
@@ -276,15 +276,15 @@ function getTenRandom(event) {
                                                     <div class="accordion-body d-flex justify-content-between">
                                                         <table>
                                                             <tr>
-                                                                <th>Cooktime:</th>
+                                                                <th>Cooktime :</th>
                                                                 <td>${recipe.readyInMinutes} Minutes</td>
                                                             </tr>
                                                             <tr>
-                                                                <th>Matches Diet:</th>
+                                                                <th>Matches Diet :</th>
                                                                 <td>${diets}</td>
                                                             </tr>
                                                             <tr>
-                                                                <th>Piq me?:</th>
+                                                                <th>Piq me!</th>
                                                                 <td><input type="submit" class="btn btn-sm btn-outline-success" value="+ Add"></td>
                                                             </tr>
                                                         </table>

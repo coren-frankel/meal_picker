@@ -18,7 +18,8 @@
     <script type="text/javascript">
         myVar = myFunc({{ data | tojson | safe }}) // SUPER COOL JSON data pass from flask to js
     </script>
-    <title>{{session.first_name}}'s Piqs</title>
+    <link rel="icon" href="static/imgs/favicon.ico" type="image/x-icon">
+    <title>piqr - {{session.first_name}}'s piqs</title>
 </head>
 
 <body class="m-3 bg-secondary">
@@ -51,7 +52,8 @@
         </tbody>
     </table>
     {% endif %}
-    <h5 class="text-center text-light rocksalt mt-5" id="nada">Loading Favorites... hang tight love.<br><br>Perhaps you've not made
+    <h5 class="text-center text-light rocksalt mt-5" id="nada">Loading Favorites... hang tight love.<br><br>Perhaps
+        you've not made
         piqs yet!<br><br>Try "Simple Search" to get casual recipes!</h5>
 </body>
 
