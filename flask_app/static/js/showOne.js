@@ -94,21 +94,21 @@ function myFunc(one) {
                                             <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
                                                 aria-labelledby="panelsStayOpen-headingOne">
                                                 <div class="accordion-body d-flex justify-content-between">
-                                                    <table class="col-4 text-center" style="font-size:110%;">
-                                                        <tr>
-                                                            <th>Cooktime :</th>
-                                                            <td class="ms-3">${convertedCookTime}</td>
+                                                    <table class="col-6 text-center" style="font-size:110%;">
+                                                        <tr class="position-relative lh-1">
+                                                            <th class="d-flex flex-nowrap position-absolute start-0">Cooktime :</th>
+                                                            <td class="ms-3 position-absolute start-50">${convertedCookTime}</td>
                                                         </tr>
-                                                        <tr>
-                                                            <th>Diet Matches :</th>
-                                                            <td class="ms-3">${diets}</td>
+                                                        <tr class="position-relative lh-1">
+                                                            <th class="d-flex flex-nowrap position-absolute start-0">Serves :</th>
+                                                            <td class="ms-3 position-absolute start-50">${recipe.servings}</td>
                                                         </tr>
-                                                        <tr>
-                                                            <th>Serves :</th>
-                                                            <td>${recipe.servings}</td>
+                                                        <tr class="position-relative lh-1">
+                                                            <th class="d-flex flex-nowrap position-absolute start-0">Diet Matches :</th>
+                                                            <td class="ms-3 position-absolute start-50 pb-1">${diets}</td>
                                                         </tr>
-                                                        </table>
-                                                        <div class="col-8 text-center">
+                                                    </table>
+                                                    <div class="col-6 text-center">
                                                         <img src="${recipe.image}" alt="${recipe.title}" style="object-fit: contain; height: 300px; width: auto;" class="rounded-1 img-fluid"><br>
                                                         ${wineInfo}
                                                     </div>

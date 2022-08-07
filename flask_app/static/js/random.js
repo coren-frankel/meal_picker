@@ -91,20 +91,23 @@ function getOneRandom(event) {
                                             <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
                                                 aria-labelledby="panelsStayOpen-headingOne">
                                                 <div class="accordion-body d-flex justify-content-between">
-                                                    <table class="text-center">
-                                                        <tr>
-                                                            <th>Cooktime :</th>
+                                                    <table class="col-4 text-center">
+                                                        <tr class="lh-1">
+                                                            <th class="">Cooktime :</th>
                                                             <td class="ms-3">${convertedCookTime}</td>
                                                         </tr>
-                                                        <tr>
-                                                            <th>Matches <br>Diet :</th>
-                                                            <td class="ms-3">${diets}</td>
+                                                        <tr class=" lh-1">
+                                                            <th class="">Diet Matches :</th>
+                                                            <td class="ms-4">${diets}</td>
                                                         </tr>
-                                                        <tr>
+                                                        <tr class="lh-1">
+                                                            <th>Save for later?</th>
                                                             <td><input type="submit" class="btn btn-sm btn-outline-success" value="piqMe"></td>
                                                         </tr>
                                                     </table>
-                                                    <img src="${recipe.image}" alt="${recipe.title}" style="object-fit: contain; height: 300px; width: auto; position: center;" class="rounded img-fluid">
+                                                    <div class="col-8 d-flex justify-content-end">
+                                                        <img src="${recipe.image}" alt="${recipe.title}" style="object-fit: contain; height: 300px; width: auto;" class="rounded img-fluid">
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -220,20 +223,23 @@ function getFiveRandom(event) {
                                                 <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
                                                     aria-labelledby="panelsStayOpen-headingOne">
                                                     <div class="accordion-body d-flex justify-content-between">
-                                                        <table class="text-center">
-                                                            <tr>
-                                                                <th>Cooktime :</th>
-                                                                <td class="ms-3">${convertedCookTime}</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <th>Matches <br>Diet :</th>
-                                                                <td class="ms-3">${diets}</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td><input type="submit" class="btn btn-sm btn-outline-success" value="piqMe"></td>
-                                                            </tr>
-                                                        </table>
-                                                        <img src="${recipe.image}" alt="${recipe.title}" style="object-fit: contain; height: 300px; width: auto; position: center;" class="rounded img-fluid">
+                                                    <table class="col-4 text-center">
+                                                    <tr class="lh-1">
+                                                        <th class="">Cooktime :</th>
+                                                        <td class="ms-3">${convertedCookTime}</td>
+                                                    </tr>
+                                                    <tr class=" lh-1">
+                                                        <th class="">Diet Matches :</th>
+                                                        <td class="ms-4">${diets}</td>
+                                                    </tr>
+                                                    <tr class="lh-1">
+                                                        <th>Save for later?</th>
+                                                        <td><input type="submit" class="btn btn-sm btn-outline-success" value="piqMe"></td>
+                                                    </tr>
+                                                    </table>
+                                                    <div class="col-8 d-flex justify-content-end">
+                                                        <img src="${recipe.image}" alt="${recipe.title}" style="object-fit: contain; height: 300px; width: auto;" class="rounded img-fluid">
+                                                    </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -350,20 +356,23 @@ function getTenRandom(event) {
                                                 <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
                                                     aria-labelledby="panelsStayOpen-headingOne">
                                                     <div class="accordion-body d-flex justify-content-between">
-                                                        <table class="text-center">
-                                                            <tr>
-                                                                <th>Cooktime :</th>
+                                                        <table class="col-4 text-center">
+                                                            <tr class="lh-1">
+                                                                <th class="">Cooktime :</th>
                                                                 <td class="ms-3">${convertedCookTime}</td>
                                                             </tr>
-                                                            <tr>
-                                                                <th>Matches <br>Diet :</th>
-                                                                <td class="ms-3">${diets}</td>
+                                                            <tr class=" lh-1">
+                                                                <th class="">Diet Matches :</th>
+                                                                <td class="ms-4">${diets}</td>
                                                             </tr>
-                                                            <tr>
+                                                            <tr class="lh-1">
+                                                                <th>Save for later?</th>
                                                                 <td><input type="submit" class="btn btn-sm btn-outline-success" value="piqMe"></td>
                                                             </tr>
                                                         </table>
-                                                        <img src="${recipe.image}" alt="${recipe.title}" style="object-fit: contain; height: 300px; width: auto; position: center;" class="rounded img-fluid">
+                                                        <div class="col-8 d-flex justify-content-end">
+                                                            <img src="${recipe.image}" alt="${recipe.title}" style="object-fit: contain; height: 300px; width: auto;" class="rounded img-fluid">
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
