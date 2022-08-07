@@ -48,7 +48,7 @@ def register(): # validate the form here ...
         }
         new_user = User.save_entry(data) # Call the save @classmethod on User
         flash("Please Login!", "success_log")
-        if (session['recipe_id']):
+        if 'recipe_id' in session:
             if session['recipe_id'] != -1:
                 first_piq = {
                     "recipe_id" : session['recipe_id'],
