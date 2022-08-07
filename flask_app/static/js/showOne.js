@@ -42,6 +42,41 @@ function myFunc(one) {
                     ingredientsList += `<li>${ingreds[i].original}</li>`
                 }
                 ingredientsList += '</ul>'
+                var wineInfo
+                if (recipe.winePairing.pairingText == '' || recipe.winePairing.pairingText == null){
+                    wineInfo = '';
+                } else {
+                    wineInfo = `<div class="text-center">
+                                    <h5 class="text-dark">Wine Pairings :<h5>
+                                    <h6 class="text-dark">${recipe.winePairing.pairingText}</h6>
+                                </div>`
+                }
+                var convertedCookTime;
+                if(recipe.readyInMinutes >= 60){
+                    var duration = recipe.readyInMinutes
+                    var hours = 0;
+                    while (duration >= 60){
+                        duration -= 60;
+                        hours++;
+                    }
+                    if (duration == 0){
+                        duration = '';
+                    } else {
+                        duration += ' Minutes';
+                    }
+                    if (hours > 1) {
+                        hours += ' Hours'
+                    } else {
+                        hours += ' Hour'
+                    }
+                    if (duration.length > 0){
+                        convertedCookTime = `${hours} & ${duration}`
+                    } else {
+                        convertedCookTime = `${hours}`
+                    }
+                } else {
+                    convertedCookTime = `${recipe.readyInMinutes} Minutes`;
+                }
                 const results = document.querySelector('#results');
                 results.innerHTML = `<form action="/favorite" method="POST">
                                 <fieldset class="border p-2">
@@ -62,20 +97,20 @@ function myFunc(one) {
                                                     <table class="col-4" style="font-size:110%;">
                                                         <tr>
                                                             <th>Cooktime :</th>
-                                                            <td>${recipe.readyInMinutes} Minutes</td>
+                                                            <td>${convertedCookTime}</td>
                                                         </tr>
                                                         <tr>
                                                             <th>Diet Matches :</th>
                                                             <td>${diets}</td>
                                                         </tr>
-                                                        
                                                         <tr>
                                                             <th>Serves :</th>
                                                             <td>${recipe.servings}</td>
                                                         </tr>
-                                                    </table>
-                                                    <div class="col-8 text-center">
-                                                        <img src="${recipe.image}" alt="${recipe.title}" style="object-fit: contain; height: 300px; width: auto; position: center;" class="rounded-1 img-fluid left-100"><br>
+                                                        </table>
+                                                        <div class="col-8 text-center">
+                                                        <img src="${recipe.image}" alt="${recipe.title}" style="object-fit: contain; height: 300px; width: auto;" class="rounded-1 img-fluid"><br>
+                                                        ${wineInfo}
                                                     </div>
                                                 </div>
                                             </div>
@@ -127,7 +162,7 @@ function myFunc(one) {
                                         </div>
                                 </fieldset>
                             </form>
-                            <a href="/remove/${recipe.id}" class="btn btn-large btn-danger">Purge this from myPiqs</a>`
+                            <a href="/remove/${recipe.id}" class="btn btn-large btn-danger mt-3">Purge this from myPiqs</a>`
             })
             .catch(err => console.error(err));
     }

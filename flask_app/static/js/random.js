@@ -48,6 +48,31 @@ function getOneRandom(event) {
                 ingredientsList += `<li>${ingreds[i].original}</li>`
             }
             ingredientsList += '</ul>'
+            if(recipe.readyInMinutes >= 60){
+                var duration = recipe.readyInMinutes
+                var hours = 0;
+                while (duration >= 60){
+                    duration -= 60;
+                    hours++;
+                }
+                if (duration == 0){
+                    duration = '';
+                } else {
+                    duration += ' Minutes';
+                }
+                if (hours > 1) {
+                    hours += ' Hours'
+                } else {
+                    hours += ' Hour'
+                }
+                if (duration.length > 0){
+                    convertedCookTime = `${hours} & ${duration}`
+                } else {
+                    convertedCookTime = `${hours}`
+                }
+            } else {
+                convertedCookTime = `${recipe.readyInMinutes} Minutes`;
+            }
             const results = document.querySelector('#results');
             results.innerHTML= `<form action="/favorite" method="POST">
                                 <fieldset class="border p-2">
@@ -68,7 +93,7 @@ function getOneRandom(event) {
                                                     <table>
                                                         <tr>
                                                             <th>Cooktime :</th>
-                                                            <td>${recipe.readyInMinutes} Minutes</td>
+                                                            <td>${convertedCookTime}</td>
                                                         </tr>
                                                         <tr>
                                                             <th>Matches Diet :</th>
@@ -153,6 +178,31 @@ function getFiveRandom(event) {
                 ingredientsList += `<li>${ingreds[i].original}</li>`
             }
             ingredientsList += '</ul>';
+            if(recipe.readyInMinutes >= 60){
+                var duration = recipe.readyInMinutes
+                var hours = 0;
+                while (duration >= 60){
+                    duration -= 60;
+                    hours++;
+                }
+                if (duration == 0){
+                    duration = '';
+                } else {
+                    duration += ' Minutes';
+                }
+                if (hours > 1) {
+                    hours += ' Hours'
+                } else {
+                    hours += ' Hour'
+                }
+                if (duration.length > 0){
+                    convertedCookTime = `${hours} & ${duration}`
+                } else {
+                    convertedCookTime = `${hours}`
+                }
+            } else {
+                convertedCookTime = `${recipe.readyInMinutes} Minutes`;
+            }
             results.innerHTML+=`<form action="/favorite" method="POST">
                                     <fieldset class="border p-2">
                                         <legend class="px-2 w-auto" style="float: none;">${recipe.title}</legend>
@@ -172,7 +222,7 @@ function getFiveRandom(event) {
                                                         <table>
                                                             <tr>
                                                                 <th>Cooktime :</th>
-                                                                <td>${recipe.readyInMinutes} Minutes</td>
+                                                                <td>${convertedCookTime}</td>
                                                             </tr>
                                                             <tr>
                                                                 <th>Matches Diet :</th>
@@ -258,6 +308,31 @@ function getTenRandom(event) {
                 ingredientsList += `<li>${ingreds[i].original}</li>`
             }
             ingredientsList += '</ul>';
+            if(recipe.readyInMinutes >= 60){
+                var duration = recipe.readyInMinutes
+                var hours = 0;
+                while (duration >= 60){
+                    duration -= 60;
+                    hours++;
+                }
+                if (duration == 0){
+                    duration = '';
+                } else {
+                    duration += ' Minutes';
+                }
+                if (hours > 1) {
+                    hours += ' Hours'
+                } else {
+                    hours += ' Hour'
+                }
+                if (duration.length > 0){
+                    convertedCookTime = `${hours} & ${duration}`
+                } else {
+                    convertedCookTime = `${hours}`
+                }
+            } else {
+                convertedCookTime = `${recipe.readyInMinutes} Minutes`;
+            }
             results.innerHTML+=`<form action="/favorite" method="POST">
                                     <fieldset class="border p-2">
                                         <legend class="px-2 w-auto" style="float: none;">${recipe.title}</legend>
@@ -277,7 +352,7 @@ function getTenRandom(event) {
                                                         <table>
                                                             <tr>
                                                                 <th>Cooktime :</th>
-                                                                <td>${recipe.readyInMinutes} Minutes</td>
+                                                                <td>${convertedCookTime}</td>
                                                             </tr>
                                                             <tr>
                                                                 <th>Matches Diet :</th>
