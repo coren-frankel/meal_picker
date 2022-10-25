@@ -53,7 +53,13 @@ Have you ever been willing to cook, unwilling to cook the familiar, but had the 
 
 ## Screenshots
 <!-- If you have screenshots, gifs, video demos you'd like to share, include them here. -->
-![Landing Page Screenshot](./img/landing.gif)
+[![piqr Demo pt. 1](./assets/piqrdemo1.gif)]
+[![piqr Demo pt. 2](./assets/piqrdemo2.gif)]
+[![piqr Demo pt. 3](./assets/piqrdemo3.gif)]
+[![piqr Demo pt. 4](./assets/piqrdemo4.gif)]
+[![piqr Demo pt. 5](./assets/piqrdemo5.gif)]
+[![piqr Demo pt. 6](./assets/piqrdemo6.gif)]
+
 
 <!--
 ## Setup
