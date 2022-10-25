@@ -1,5 +1,4 @@
-# *piqr*
-> (pick·​er | \ ˈpi-kər \) 
+# *piqr*  (pick·​er | \ ˈpi-kər \) 
 > piqr is a random recipe retrieval CRUD app and the first full-stack portfolio project for <a href="https://github.com/coren-frankel">Coren Frankel</a> as a fledgling developer. It integrates the spoonacular API random recipe endpoint to provide an adventurous recipe discovery, persistence, and deletion experience for the user.
 > Live demo [_here_](http://3.101.63.102/). <!-- Once a live deployment is available, include the link here. -->
 
