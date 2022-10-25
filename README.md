@@ -53,12 +53,24 @@ Have you ever been willing to cook, unwilling to cook the familiar, but had the 
 
 ## Screenshots
 <!-- If you have screenshots, gifs, video demos you'd like to share, include them here. -->
-[![piqr Demo pt. 1](./assets/piqrdemo1.gif)]
-[![piqr Demo pt. 2](./assets/piqrdemo2.gif)]
-[![piqr Demo pt. 3](./assets/piqrdemo3.gif)]
-[![piqr Demo pt. 4](./assets/piqrdemo4.gif)]
-[![piqr Demo pt. 5](./assets/piqrdemo5.gif)]
-[![piqr Demo pt. 6](./assets/piqrdemo6.gif)]
+<p>
+<img src="./assets/piqrdemo1.gif" rel="piqr Demo pt.1" style="height: 400px;">
+</p>
+<p>
+<img src="./assets/piqrdemo2.gif" rel="piqr Demo pt.2" style="height: 400px;">
+</p>
+<p>
+<img src="./assets/piqrdemo3.gif" rel="piqr Demo pt.3" style="height: 400px;">
+</p>
+<p>
+<img src="./assets/piqrdemo4.gif" rel="piqr Demo pt.4" style="height: 400px;">
+</p>
+<p>
+<img src="./assets/piqrdemo5.gif" rel="piqr Demo pt.5" style="height: 400px;">
+</p>
+<p>
+<img src="./assets/piqrdemo6.gif" rel="piqr Demo pt.6" style="height: 400px;">
+</p>
 
 
 <!--
