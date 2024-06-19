@@ -19,7 +19,7 @@ class Favorite():
         if results == ():
             return False
         print(results)
-        return results;
+        return results
     
     @classmethod
     def remove_piq(cls, data):

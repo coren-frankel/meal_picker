@@ -73,4 +73,4 @@ class User():
         results = connectToMySQL(DATABASE).query_db(query, data)
         if results == ():
             return False
-        return results[0];
+        return results[0]
